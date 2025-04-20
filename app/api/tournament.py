@@ -1,4 +1,3 @@
-# app/api/tournament.py
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 from app.db.session import SessionLocal
@@ -25,4 +24,3 @@ def create_tournament(t: schema.TournamentCreate, db: Session = Depends(get_db))
     db.commit()
     db.refresh(new_tournament)
     return new_tournament
-

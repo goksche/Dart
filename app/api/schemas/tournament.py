@@ -1,4 +1,3 @@
-# app/api/schemas/tournament.py
 from pydantic import BaseModel
 from typing import Optional, Literal
 from datetime import date
@@ -14,4 +13,4 @@ class TournamentOut(TournamentCreate):
     id: int
 
     class Config:
-        from_attributes = True  # für Pydantic v2
+        from_attributes = True
